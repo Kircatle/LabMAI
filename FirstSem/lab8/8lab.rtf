@@ -1,0 +1,79 @@
+akrills@DESKTOP-70J5NO3:~$ emacs lab8_1.c 
+
+[16]+ Stopped emacs lab8_1.c 
+akrills@DESKTOP-70J5NO3:~$ cat lab8_1.c 
+#include <stdio.h> 
+#include <math.h> 
+int main(){ 
+int age,age1,raz; 
+printf("Enter your age(full years): "); 
+sanf("%d", &age); 
+printf("Enter your younger brother's age(full years): "); 
+scanf("%d", &age1); 
+raz = age/age1; 
+printf("The difference is %d\n", raz); 
+return 0; 
+} 
+akrills@DESKTOP-70J5NO3:~$ cc lab8_1.c 
+lab8_1.c: In function ‘main’: 
+lab8_1.c:7:3: warning: implicit declaration of function ‘sanf’; did you mean ‘nanf’? [-Wimplicit-function-declaration] 
+sanf("%d", &age); 
+^~~~ 
+nanf 
+/tmp/cchXgIcJ.o: In function `main': 
+lab8_1.c:(.text+0x3c): undefined reference to `sanf' 
+collect2: error: ld returned 1 exit status 
+akrills@DESKTOP-70J5NO3:~$ emacs lab8_1.c 
+
+[17]+ Stopped emacs lab8_1.c 
+akrills@DESKTOP-70J5NO3:~$ cat lab8_1.c 
+#include <stdio.h> 
+#include <math.h> 
+int main(){ 
+int age,age1,raz; 
+printf("Enter your age(full years): "); 
+scanf("%d", &age); 
+printf("Enter your younger brother's age(full years): "); 
+scanf("%d", &age1); 
+raz = age/age1; 
+printf("The difference is %d\n", raz); 
+return 0; 
+} 
+akrills@DESKTOP-70J5NO3:~$ cc lab8_1.c 
+akrills@DESKTOP-70J5NO3:~$ ./a.out 
+Enter your age(full years): 15 
+Enter your younger brother's age(full years): 0 
+Floating point exception (core dumped) 
+akrills@DESKTOP-70J5NO3:~$ emacs lab8_1.c 
+
+[18]+ Stopped emacs lab8_1.c 
+akrills@DESKTOP-70J5NO3:~$ cat lab8_1.c 
+#include <stdio.h> 
+#include <math.h> 
+int main(){ 
+int age,age1; 
+int raz; 
+printf("Enter your age(full years): "); 
+scanf("%d", &age); 
+printf("Enter your younger brother's age(full years): "); 
+scanf("%d", &age1); 
+if (age1 != 0) 
+{raz = age/age1; 
+printf("The difference is ~%d\n", raz); 
+} else { 
+age1 = age1+1; 
+age = age+1; 
+raz = age/age1; 
+printf("The difference is ~%d\n", raz); 
+} 
+return 0; 
+} 
+akrills@DESKTOP-70J5NO3:~$ cc lab8_1.c 
+akrills@DESKTOP-70J5NO3:~$ ./a.out 
+Enter your age(full years): 15 
+Enter your younger brother's age(full years): 0 
+The difference is ~16 
+akrills@DESKTOP-70J5NO3:~$ ./a.out 
+Enter your age(full years): 12 
+Enter your younger brother's age(full years): 5 
+The difference is ~2

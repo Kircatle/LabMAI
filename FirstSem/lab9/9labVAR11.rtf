@@ -1,0 +1,93 @@
+akrills@DESKTOP-70J5NO3:~$ emacs lab9.c
+
+[10]+  Stopped                 emacs lab9.c
+akrills@DESKTOP-70J5NO3:~$ cat lab9.c
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#define max(x,y) ((x)>(y) ? (x) : (y))
+#define min(x,y) ((x)<(y) ? (x) : (y))
+#define sign(x) ((x)>0 ? 1 : ((x)<0 ? -1 : 0))
+#define mod(x,y) (((x)%(y)+(y))%(y))
+int main ()
+{
+  const int i0 = 5;
+  const int j0 = 5;
+  const int l0 = 4;
+  int ik,jk,lk,i,j,l,k = 0;
+  int distance1, distance2;
+  i = i0; j = j0; l = l0;
+  ik = i; jk = j; lk = l;
+  printf("Starting position: i = %d, j = %d, l = %d, k = %d \nIterations: \n", i, j, l , k);
+  for (k = 1; k<51; k++) {
+    distance1 = (ik+10)*(ik+10)+(jk+10)*(jk+10);
+    distance2 = (ik+20)*(ik+20)+(jk+20)*(jk+20);
+    if ((distance1 <= 100) && (distance2 <= 100)) {
+      printf("\n Got it! ");
+      exit(1);}
+    i = ik/3-abs(ik-k)*(sign(lk-jk));
+    j = mod(jk,10)-mod(max(ik,jk),(k+1));
+    l = ik+mod((jk*k),5)+lk/5+3;
+    ik = i;
+    jk = j;
+    lk = l;
+    printf("i = %d, j = %d, l = %d, k = %d \n", i, j, l , k);
+
+  }
+  if (k == 51) {printf("The point is not included\n");}
+}
+akrills@DESKTOP-70J5NO3:~$ cc lab9.c
+akrills@DESKTOP-70J5NO3:~$ ./a.out
+Starting position: i = 5, j = 5, l = 4, k = 0
+Iterations:
+i = 5, j = 4, l = 8, k = 1
+i = -2, j = 2, l = 12, k = 2
+i = -5, j = 0, l = 4, k = 3
+i = -10, j = 0, l = -2, k = 4
+i = 12, j = 0, l = -7, k = 5
+i = 10, j = -5, l = 14, k = 6
+i = 0, j = 3, l = 15, k = 7
+i = -8, j = 0, l = 10, k = 8
+i = -19, j = 0, l = -3, k = 9
+i = 23, j = 0, l = -16, k = 10
+i = 19, j = -11, l = 23, k = 11
+i = -1, j = 3, l = 29, k = 12
+i = -14, j = 0, l = 11, k = 13
+i = -32, j = 0, l = -9, k = 14
+i = 37, j = 0, l = -30, k = 15
+i = 33, j = -3, l = 34, k = 16
+i = -5, j = -8, l = 46, k = 17
+i = -24, j = -12, l = 8, k = 18
+i = -51, j = 0, l = -18, k = 19
+i = 54, j = 0, l = -51, k = 20
+i = 51, j = -10, l = 47, k = 21
+i = -12, j = -5, l = 63, k = 22
+i = -39, j = -14, l = 3, k = 23
+i = -76, j = -5, l = -32, k = 24
+i = 76, j = -16, l = -79, k = 25
+i = 75, j = -18, l = 68, k = 26
+i = -23, j = -17, l = 95, k = 27
+i = -58, j = -9, l = 3, k = 28
+i = -106, j = -20, l = -51, k = 29
+i = 101, j = -11, l = -113, k = 30
+i = 103, j = 4, l = 86, k = 31
+i = -37, j = 0, l = 126, k = 32
+i = -82, j = 0, l = -9, k = 33
+i = 89, j = 0, l = -80, k = 34
+i = 83, j = -17, l = 76, k = 35
+i = -20, j = -6, l = 104, k = 36
+i = -63, j = -28, l = 6, k = 37
+i = -122, j = -9, l = -58, k = 38
+i = 121, j = -30, l = -126, k = 39
+i = 121, j = -39, l = 99, k = 40
+i = -40, j = -36, l = 144, k = 41
+i = -95, j = -3, l = -6, k = 42
+i = 107, j = -34, l = -92, k = 43
+i = 98, j = -11, l = 96, k = 44
+i = -21, j = 3, l = 120, k = 45
+i = -74, j = 0, l = 9, k = 46
+i = -145, j = 0, l = -70, k = 47
+i = 145, j = 0, l = -156, k = 48
+i = 144, j = -45, l = 117, k = 49
+i = -46, j = -37, l = 170, k = 50
+The point is not included

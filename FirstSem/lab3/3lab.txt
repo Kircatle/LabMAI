@@ -1,0 +1,355 @@
+
+Script started on Thu Oct  4 18:06:00 2018
+ameron: ~188237@cameron:~$ ruptime
+AlexDebian  down   18+22:52
+Lubuntu     down      23:36
+Maya        down    4+02:14
+Ubuntu1     down       5:29
+a-HP-Compaq-down    5+04:50
+cameron       up       8:37,     9 users,  load 1.17, 1.78, 1.87
+client01    down    2+23:09
+client02      up       8:37,     0 users,  load 0.00, 0.00, 0.07
+client04      up       0:07,     1 user,   load 0.48, 1.07, 0.57
+client05      up       8:37,     0 users,  load 0.22, 0.11, 0.04
+client06      up       8:34,     0 users,  load 0.00, 0.00, 0.00
+client07      up       8:34,     0 users,  load 0.04, 0.05, 0.02
+client18    down       4:52
+client19      up       8:38,     0 users,  load 0.00, 0.00, 0.00
+client20    down    7+05:54
+client21      up       8:28,     0 users,  load 0.00, 0.00, 0.00
+client22    down       1:58
+daniil-UX310down   12+04:51
+efimenko-Insdown    7+22:40
+kip-HP-Pavildown   19+00:17
+leonidTs-Aspdown   12+04:13
+pavel-Virtuadown    5+01:11
+perturbatorV  up       3:45,     1 user,   load 0.00, 0.01, 0.00
+repeinik-RC5down    4+02:11
+sinchess-N75down   18+23:31
+teem-HP-ProBdown    4+23:28
+valli       down    3+01:07
+ameron: ~188237@cameron:~$ ping alpha
+PING alpha (192.168.2.202) 56(84) bytes of data.
+64 bytes from alpha (192.168.2.202): icmp_seq=1 ttl=255 time=0.388 ms
+64 bytes from alpha (192.168.2.202): icmp_seq=2 ttl=255 time=0.323 ms
+64 bytes from alpha (192.168.2.202): icmp_seq=3 ttl=255 time=0.334 ms
+64 bytes from alpha (192.168.2.202): icmp_seq=4 ttl=255 time=0.318 ms
+^C
+--- alpha ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3080ms
+rtt min/avg/max/mdev = 0.318/0.340/0.388/0.035 ms
+ameron: ~188237@cameron:~$ rlogin alpha
+The authenticity of host 'alpha (192.168.2.202)' can't be established.
+ECDSA key fingerprint is SHA256:hTjBJmeQydL7ObH4Vh2oBCc4iz5xShOjkeUHI+iDkBk.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'alpha,192.168.2.202' (ECDSA) to the list of known hosts.
+Password for 188237@AXP4:
+                                  __,gnnnOCCCCCOObaau,_
+   _._                    __,gnnCCCCCCCCOPF"''
+  (N\\XCbngg,._____.,gnnndCCCCCCCCCCCCF"___,,,,___
+   \N\\XCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCOOOOPYvv.
+    \N\\XCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCPF"''
+     \N\\XCCCCCCCCCCCCCCCCCCCCCCCCCOF"'
+      \N\\XCCCCCCCCCCCCCCCCCCCCOF"'                     _    __  ______  _  _
+       \N\\XCCCCCCCCCCCCCCCPF"'                        / \   \ \/ /  _ \| || |
+        \N\\"PCOCCCOCCFP""                            / _ \   \  /| |_) | || |_
+
+
+2018-10-04 18:16                                                  Page 2
+
+
+         \N\                                         / ___ \  /  \|  __/|__   _|
+          \N\                                       /_/   \_\/_/\_\_|      |_|
+           \N\                                      ----------------------------
+            \NN\                                    OS                NetBSD 8.0
+             \NN\                                   CPU                    Alpha
+              \NNA.                                 RAM                  1024 MB
+               \NNA,                                
+                \NNN,                               Note: GNU make (gmake) works
+                 \NNN\                                    better than native   
+                  \NNN\                                 
+                   \NNNA
+188237@AXP4 ~ $ ssh alpha
+The authenticity of host 'alpha (192.168.2.202)' can't be established.
+ECDSA key fingerprint is SHA256:hTjBJmeQydL7ObH4Vh2oBCc4iz5xShOjkeUHI+iDkBk.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'alpha,192.168.2.202' (ECDSA) to the list of known hosts.
+Password for 188237@AXP4:
+Last login: Thu Oct  4 18:10:32 2018 from 192.168.2.200
+                                  __,gnnnOCCCCCOObaau,_
+   _._                    __,gnnCCCCCCCCOPF"''
+  (N\\XCbngg,._____.,gnnndCCCCCCCCCCCCF"___,,,,___
+   \N\\XCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCOOOOPYvv.
+    \N\\XCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCPF"''
+     \N\\XCCCCCCCCCCCCCCCCCCCCCCCCCOF"'
+      \N\\XCCCCCCCCCCCCCCCCCCCCOF"'                     _    __  ______  _  _
+       \N\\XCCCCCCCCCCCCCCCPF"'                        / \   \ \/ /  _ \| || |
+        \N\\"PCOCCCOCCFP""                            / _ \   \  /| |_) | || |_
+         \N\                                         / ___ \  /  \|  __/|__   _|
+          \N\                                       /_/   \_\/_/\_\_|      |_|
+           \N\                                      ----------------------------
+            \NN\                                    OS                NetBSD 8.0
+             \NN\                                   CPU                    Alpha
+              \NNA.                                 RAM                  1024 MB
+               \NNA,                                
+                \NNN,                               Note: GNU make (gmake) works
+                 \NNN\                                    better than native   
+                  \NNN\                                 
+                   \NNNA
+188237@AXP4 ~ $ logout
+Connection to alpha closed.
+188237@AXP4 ~ $ logout
+Connection to alpha closed.
+ameron: ~188237@cameron:~$ exit
+exit
+
+Script started on Thu Oct 18 18:42:25 2018
+ameron: ~188237@cameron:~$ scp file1 192.168.2.202:/stud/188237
+Password for 188237@AXP4:
+file1                                         100%   12     0.0KB/s   00:00    
+ameron: ~188237@cameron:~$ scp water.txt 192.168.2.202:~/water.txt
+Password for 188237@AXP4:
+water.txt                                     100%    4     0.0KB/s   00:00    
+ameron: ~188237@cameron:~$ scp student.txt 192.168.2.202:`pwd`
+Password for 188237@AXP4:
+student.txt                                   100%   44     0.0KB/s   00:00    
+ameron: ~188237@cameron:~$ ssh 188237@192.168.2.202 ls
+Password for 188237@AXP4:
+file1
+file2
+file3
+file4
+student.txt
+water.txt
+ameron: ~188237@cameron:~$ scp 192.168.2.202:/stud/188237/file2 dir1/file3
+Password for 188237@AXP4:
+file2                                         100%    0     0.0KB/s   00:00    
+ameron: ~188237@cameron:~$ scp 192.168.2.202:~/file2 .
+Password for 188237@AXP4:
+file2                                         100%    0     0.0KB/s   00:00    
+ameron: ~188237@cameron:~$ scp 192.168.2.202:`pwd` /file4 file4
+file4: No such file or directory
+ameron: ~188237@cameron:~$ scp 192.168.2.202:`pwd`/file4 file44
+Password for 188237@AXP4:
+file4                                         100%    0     0.0KB/s   00:00    
+ameron: ~188237@cameron:~$ ls
+123.nam  file4        turing.tu               ????????????
+192exit  jstu4-2.3    water.txt               ??????????????????????????
+dir1     lastproto    ??????????              ?????????????? ????????
+exit     nam.out      ??????????????????      ??????????????
+file1    student.txt  ????????????????
+file2    tests.txt    ??????????????????????
+ameron: ~188237@cameron:~$ ls dir1
+file3
+ameron: ~188237@cameron:~$ exit
+exit
+
+
+Script started on Thu Oct 25 17:11:50 2018
+ameron: ~188237@cameron:~$ scp 192.168.2.202:`pwd`/file1 192.168.2.200:`pwd`/file6
+Password for 188237@AXP4:
+Permission denied, please try again.
+Permission denied, please try again.
+188237@192.168.2.200: Permission denied (publickey,password).
+lost connection
+ameron: ~188237@cameron:~$ scp -r dir1 192.168.2.202:
+Password for 188237@AXP4:
+file3                                         100%    0     0.0KB/s   00:00    
+ameron: ~188237@cameron:~$ rsync -a dir1 192.168.2.202: 
+Password for 188237@AXP4:
+ameron: ~188237@cameron:~$ scp -r 192.168.2.202:dir5 .
+Password for 188237@AXP4:
+ameron: ~188237@cameron:~$ ls
+123.nam        file1        tests.txt               ????????????
+192.168.2.202  file2        turing.tu               ??????????????????????????
+192exit        file4        water.txt               ?????????????? ????????
+dir1           jstu4-2.3    ??????????              ??????????????
+dir2           lastproto1   ??????????????????
+dir5           nam.out      ????????????????
+exit           student.txt  ??????????????????????
+ameron: ~188237@cameron:~$ exit
+exit
+
+Script started on Thu Oct 25 17:28:39 2018
+ameron: ~188237@cameron:~$ ftp 192.168.2.200
+Connected to 192.168.2.200.
+220 c FTP server (Version 6.4/OpenBSD/Linux-ftpd-0.17) ready.
+Name (192.168.2.200:188237): 188237
+331 Password required for 188237.
+Password:
+230 User 188237 logged in.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> pwd
+257 "/stud/188237" is current directory.
+ftp> ls -l
+200 PORT command successful.
+150 Opening ASCII mode data connection for '/bin/ls'.
+total 1216
+-rw-rw-r--  1 188237 188237     242 ?????? 18 15:14 123.nam
+drwxrwxr-x  2 188237 188237    4096 ?????? 25 16:59 192.168.2.202
+-rw-rw-r--  1 188237 188237      12 ?????? 18 18:35 192exit
+-rwxr-xr-x  1 188237 188237    6539 ?????? 25 17:27 .bash_history
+-rwxr-xr-x  1 188237 188237     220 ??????  1  2015 .bash_logout
+-rwxr-xr-x  1 188237 188237    3771 ??????  1  2015 .bashrc
+drwxr-xr-x 11 188237 188237    4096 ?????? 11 17:46 .cache
+drwxr-xr-x 20 188237 188237    4096 ?????? 18 19:11 .config
+drwx------  3 188237 188237    4096 ??????  4 14:18 .dbus
+drwxrwxr-x  2 188237 188237    4096 ?????? 18 18:47 dir1
+drwxrwxr-x  2 188237 188237    4096 ?????? 25 16:57 dir2
+drwxrwxr-x  2 188237 188237    4096 ?????? 25 17:10 dir5
+-rw-r--r--  1 188237 188237      41 ?????? 18 14:55 .dmrc
+drwxr-xr-x  4 188237 188237    4096 ??????  6 17:57 .emacs.d
+-rwxr-xr-x  1 188237 188237       4 ?????? 18 18:36 exit
+-rw-rw-r--  1 188237 188237      12 ?????? 25 17:25 file1
+-rw-r--r--  1 188237 188237       0 ?????? 25 17:26 file2
+-rw-r--r--  1 188237 188237       0 ?????? 18 18:52 file4
+drwx------  2 188237 188237    4096 ??????  4 15:06 .gconf
+drwx------  3 188237 188237    4096 ?????? 11 17:18 .gnupg
+-rwxr-xr-x  1 188237 188237      44 ??????  6 17:32 .gnuplot_history
+drwxr-xr-x  3 188237 188237    4096 ?????? 30  2013 jstu4-2.3
+-rwxr-xr-x  1 188237 188237    1865 ?????? 18 18:53 lastproto1
+-rw-rw-r--  1 188237 188237    1244 ?????? 25 17:14 lastproto2
+drwxr-xr-x  3 188237 188237    4096 ??????  6 14:23 .local
+drwxr-xr-x  4 188237 188237    4096 ??????  6 14:47 .mozilla
+-rw-rw-r--  1 188237 188237 1048576 ?????? 18 18:07 nam.out
+-rwxr-xr-x  1 188237 188237     261 ?????? 13 16:24 .pam_environment
+drwx------  3 188237 188237    4096 ??????  4 15:07 .pki
+-rwxr-xr-x  1 188237 188237     655 ?????? 24  2016 .profile
+drwxr-xr-x  2 188237 188237    4096 ?????? 18 17:15 .remmina
+drwxr-xr-x  2 188237 188237    4096 ?????? 13 16:50 .ssh
+-rwxr-xr-x  1 188237 188237      44 ?????? 13 16:26 student.txt
+-rwxr-xr-x  1 188237 188237      72 ?????? 27 18:57 tests.txt
+drwxr-xr-x  4 188237 188237    4096 ?????? 13 16:52 .thumbnails
+-rwxr-xr-x  1 188237 188237     530 ?????? 27 18:49 turing.tu
+-rwxr-xr-x  1 188237 188237       4 ?????? 20 14:57 water.txt
+-rw-------  1 188237 188237     212 ?????? 25 16:44 .Xauthority
+-rwxr-xr-x  1 188237 188237    1600 ??????  9  2016 .Xdefaults
+-rwxr-xr-x  1 188237 188237      14 ??????  9  2016 .xscreensaver
+-rw-------  1 188237 188237    3472 ?????? 25 16:44 .xsession-errors
+-rw-------  1 188237 188237    3469 ?????? 18 14:55 .xsession-errors.old
+drwxr-xr-x  2 188237 188237    4096 ?????? 13 16:24 ??????????
+drwxr-xr-x  2 188237 188237    4096 ?????? 13 16:24 ??????????????????
+drwxr-xr-x  2 188237 188237    4096 ?????? 18 18:14 ????????????????
+drwxr-xr-x  2 188237 188237    4096 ?????? 13 16:24 ??????????????????????
+drwxr-xr-x  2 188237 188237    4096 ?????? 13 16:24 ????????????
+drwxr-xr-x  2 188237 188237    4096 ?????? 13 16:24 ??????????????????????????
+drwxr-xr-x  3 188237 188237    4096 ?????? 20 17:51 ?????????????? ????????
+drwxr-xr-x  2 188237 188237    4096 ?????? 13 16:24 ??????????????
+226 Transfer complete.
+ftp> get file1
+local: file1 remote: file1
+200 PORT command successful.
+150 Opening BINARY mode data connection for 'file1' (12 bytes).
+226 Transfer complete.
+12 bytes received in 0.00 secs (225.3606 kB/s)
+ftp> put file2
+local: file2 remote: file2
+200 PORT command successful.
+150 Opening BINARY mode data connection for 'file2'.
+226 Transfer complete.
+ftp> binary
+200 Type set to I.
+ftp> mput f*
+mput file1? 
+200 PORT command successful.
+150 Opening BINARY mode data connection for 'file1'.
+226 Transfer complete.
+mput file2? 
+200 PORT command successful.
+150 Opening BINARY mode data connection for 'file2'.
+226 Transfer complete.
+mput file4? 
+200 PORT command successful.
+150 Opening BINARY mode data connection for 'file4'.
+226 Transfer complete.
+ftp> mget f*
+mget file1? 
+200 PORT command successful.
+150 Opening BINARY mode data connection for 'file1' (0 bytes).
+226 Transfer complete.
+mget file2? 
+200 PORT command successful.
+150 Opening BINARY mode data connection for 'file2' (0 bytes).
+226 Transfer complete.
+mget file4? 
+200 PORT command successful.
+150 Opening BINARY mode data connection for 'file4' (0 bytes).
+226 Transfer complete.
+ftp> !ls -l
+total 1112
+
+-rw-rw-r-- 1 188237 188237     242 Oct 18 15:14 123.nam
+drwxrwxr-x 2 188237 188237    4096 Oct 25 16:59 192.168.2.202
+-rw-rw-r-- 1 188237 188237      12 Oct 18 18:35 192exit
+drwxrwxr-x 2 188237 188237    4096 Oct 18 18:47 dir1
+drwxrwxr-x 2 188237 188237    4096 Oct 25 16:57 dir2
+drwxrwxr-x 2 188237 188237    4096 Oct 25 17:10 dir5
+-rwxr-xr-x 1 188237 188237       4 Oct 18 18:36 exit
+-rw-rw-r-- 1 188237 188237       0 Oct 25 17:30 file1
+-rw-r--r-- 1 188237 188237       0 Oct 25 17:30 file2
+-rw-r--r-- 1 188237 188237       0 Oct 25 17:30 file4
+drwxr-xr-x 3 188237 188237    4096 Apr 30  2013 jstu4-2.3
+-rwxr-xr-x 1 188237 188237    1865 Oct 18 18:53 lastproto1
+-rw-rw-r-- 1 188237 188237    1244 Oct 25 17:14 lastproto2
+-rw-rw-r-- 1 188237 188237 1048576 Oct 18 18:07 nam.out
+-rwxr-xr-x 1 188237 188237      44 Sep 13 16:26 student.txt
+-rwxr-xr-x 1 188237 188237      72 Sep 27 18:57 tests.txt
+-rwxr-xr-x 1 188237 188237     530 Sep 27 18:49 turing.tu
+-rwxr-xr-x 1 188237 188237       4 Sep 20 14:57 water.txt
+drwxr-xr-x 2 188237 188237    4096 Sep 13 16:24 ??????????
+drwxr-xr-x 2 188237 188237    4096 Sep 13 16:24 ??????????????????
+drwxr-xr-x 2 188237 188237    4096 Oct 18 18:14 ????????????????
+drwxr-xr-x 2 188237 188237    4096 Sep 13 16:24 ??????????????????????
+drwxr-xr-x 2 188237 188237    4096 Sep 13 16:24 ????????????
+drwxr-xr-x 2 188237 188237    4096 Sep 13 16:24 ??????????????????????????
+drwxr-xr-x 3 188237 188237    4096 Sep 20 17:51 ?????????????? ????????
+drwxr-xr-x 2 188237 188237    4096 Sep 13 16:24 ??????????????
+ftp> quit
+221 Goodbye.
+ameron: ~188237@cameron:~$ exit
+exit
+
+Script started on Thu Oct 25 18:09:29 2018
+ameron: ~188237@cameron:~$ tar -cf tir.tar dir1
+ameron: ~188237@cameron:~$ pax -w -x tar dir2 > tir2.tar
+ameron: ~188237@cameron:~$ pax -w dir3 > tir3.pax
+ameron: ~188237@cameron:~$ ls    
+123.nam        dir3      jstu4-2.3       tir3.pax
+192.168.2.202  dir3.pax  lastproto       turing.tu
+192exit        dir4      lastproto1      water.txt
+dir1           dir5      lastproto2      ??????????
+dir1.tar       dir6      lastproto3.txt  ??????????????????
+dir1.tgz       dir7      lastproto4.txt  ????????????????
+dir2           dir8.tar  nam.out         ??????????????????????
+dir2.pax       exit      student.txt     ????????????
+dir2.tar       file1     tests.txt       ??????????????????????????
+dir2.tar.bz2   file2     tir.tar         ?????????????? ????????
+dir2.tar.gz    file4     tir2.tar        ??????????????
+ameron: ~188237@cameron:~$ tar -xf tir.tar
+ameron: ~188237@cameron:~$ pax -r < tir3.pax
+ameron: ~188237@cameron:~$ tar -tvf tir.tar
+drwxrwxr-x 188237/188237     0 2018-10-18 18:47 dir1/
+-rw-r--r-- 188237/188237     0 2018-10-18 18:47 dir1/file3
+ameron: ~188237@cameron:~$ pax < tir3.pax
+dir3
+ameron: ~188237@cameron:~$ gzip -9 -c tir.tar > ur.tgz
+ameron: ~188237@cameron:~$ pax -w -x cpio dir1 > lil.pax
+ameron: ~188237@cameron:~$ tar -zcf tir2.tar.gz file1
+ameron: ~188237@cameron:~$ tar -jcf tir2.tar.bz2 file1
+ameron: ~188237@cameron:~$ gzip -d -c ur.tgz > ul.tar
+ameron: ~188237@cameron:~$ gzip -c -d ur.tgz | tar -xf -
+ameron: ~188237@cameron:~$ exit
+exit
+
+Script started on Thu Oct 25 18:26:03 2018
+ameron: ~188237@cameron:~$iconv -c -f koi8-r -t cp1251 water.txt r
+wet
+ameron: ~188237@cameron:~$ iconv -f gb2312 -t utf-8 file1 
+iconv: illegal input sequence at position 0
+ameron: ~188237@cameron:~$ unix2dos file1
+unix2dos: converting file file1 to DOS format ...
+ameron: ~188237@cameron:~$ dos2unix file1
+dos2unix: converting file file1 to Unix format ...
+ameron: ~188237@cameron:~$ exit
+exit
