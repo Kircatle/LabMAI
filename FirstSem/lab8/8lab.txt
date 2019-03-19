@@ -15,8 +15,8 @@ printf("The difference is %d\n", raz);
 return 0; 
 } 
 akrills@DESKTOP-70J5NO3:~$ cc lab8_1.c 
-lab8_1.c: In function ‘main’: 
-lab8_1.c:7:3: warning: implicit declaration of function ‘sanf’; did you mean ‘nanf’? [-Wimplicit-function-declaration] 
+lab8_1.c: In function â€˜mainâ€™: 
+lab8_1.c:7:3: warning: implicit declaration of function â€˜sanfâ€™; did you mean â€˜nanfâ€™? [-Wimplicit-function-declaration] 
 sanf("%d", &age); 
 ^~~~ 
 nanf 
