@@ -24,7 +24,7 @@ int count_column(FILE *input) //Количество столбцов в мат�
     fseek(input, 0L, SEEK_SET);   
     return count_all_elem(input)/count_line(input);
 }
-void matrix_to_vector(double *matrix, FILE *input) //векторное представление матрицы
+void matrix_to_vector(double *matrix, FILE *input) //перевод матрицу в векторное представление
 {
     for (int i=0; i<302; i++)
         matrix[i]=0;
@@ -177,7 +177,7 @@ void vector_trans(double *matrix, FILE *input) //нахождение строк
             }
         printf("\n"); 
 }
-void matrix_trans(double *matrix, FILE *input)
+void matrix_trans(FILE *input) //нахождение строк с наибольшим числом элементов относительно матрицы
 {
      double sym, summ[100];
     int count[100];
@@ -239,7 +239,7 @@ void action_menu(FILE *input)
                 vector_trans(matrix, input);
                 break;
             case 4:
-                matrix_trans(matrix, input);
+                matrix_trans(input);
                 break;
             case 5:
                 exit(0);
