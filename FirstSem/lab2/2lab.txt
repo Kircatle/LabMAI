@@ -1,0 +1,92 @@
+НУЖНО ДОБАВИТЬ КОМАНДЫ
+UPTIME
+RUPTIME
+WHO
+RWHO
+LS -L
+
+
+
+akrills@DESKTOP-70J5NO3:~$ cat student.txt
+m8o-104b-18
+Kirill Syroezkin
+akrills@DESKTOP-70J5NO3:~$ tty
+/dev/tty1
+akrills@DESKTOP-70J5NO3:~$ man uptime
+UPTIME(1)                                           User Commands                                          UPTIME(1)
+NAME
+       uptime - Tell how long the system has been running.
+SYNOPSIS
+       uptime [options]
+DESCRIPTION
+       uptime gives a one line display of the following information.  The current time, how long the system has been
+       running, how many users are currently logged on, and the system load averages for the past 1, 5, and 15  min‐
+       utes.
+       This is the same information contained in the header line displayed by w(1).
+       System  load  averages  is  the  average number of processes that are either in a runnable or uninterruptable
+       state.  A process in a runnable state is either using the CPU or waiting to use the CPU.  A process in  unin‐
+       terruptable state is waiting for some I/O access, eg waiting for disk.  The averages are taken over the three
+       time intervals.  Load averages are not normalized for the number of CPUs in a system, so a load average of  1
+       means  a  single  CPU  system  is loaded all the time while on a 4 CPU system it means it was idle 75% of the
+       time.
+            SUMMARY OF LESS COMMANDS
+      Commands marked with * may be preceded by a number, N.
+      Notes in parentheses indicate the behavior if N is given.
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.
+  h  H                 Display this help.
+  q  :q  Q  :Q  ZZ     Exit.
+ ---------------------------------------------------------------------------
+                           MOVING
+  e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+  b  ^B  ESC-v      *  Backward one window (or N lines).
+  z                 *  Forward  one window (and set window to N).
+  w                 *  Backward one window (and set window to N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to N).
+  u  ^U             *  Backward one half-window (and set half-window to N).
+  ESC-)  RightArrow *  Right one half screen width (or N positions).
+  ESC-(  LeftArrow  *  Left  one half screen width (or N positions).
+  ESC-}  ^RightArrow   Right to last column displayed.
+  ESC-{  ^LeftArrow    Left  to first column.
+  F                    Forward forever; like "tail -f".
+  ESC-F                Like F but stop when search pattern is found.
+  r  ^R  ^L            Repaint screen.
+akrills@DESKTOP-70J5NO3:~$ whoami
+akrills
+akrills@DESKTOP-70J5NO3:~$ ps -l
+F S   UID   PID  PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000     4     3  0  80   0 -  4227 -      tty1     00:00:00 bash
+0 R  1000    76     4  0  80   0 -  4271 -      tty1     00:00:00 ps
+akrills@DESKTOP-70J5NO3:~$ date
+Thu Sep 27 11:19:48 STD 2018
+akrills@DESKTOP-70J5NO3:~$ hostname
+DESKTOP-70J5NO3
+akrills@DESKTOP-70J5NO3:~$ ~
+-bash: /home/akrills: Is a directory
+akrills@DESKTOP-70J5NO3:~$ pwd
+/home/akrills
+akrills@DESKTOP-70J5NO3:~$ ls
+ersjokerAppDataLocalPackagesCanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgscLocalStaterootfshomeakrills
+student.txt
+akrills@DESKTOP-70J5NO3:~$ mkdir rabbit
+akrills@DESKTOP-70J5NO3:~$ cd rabbit
+akrills@DESKTOP-70J5NO3:~/rabbit$ cat > rcarrot.txt
+rotten
+akrills@DESKTOP-70J5NO3:~/rabbit$ cat > rwater.txt
+wet
+akrills@DESKTOP-70J5NO3:~/rabbit$ cat rwater.txt rcarrot.txt > rdeath.txt
+akrills@DESKTOP-70J5NO3:~/rabbit$ cat rdeath.txt
+wet
+rotten
+akrills@DESKTOP-70J5NO3:~/rabbit$ cp rwater.txt water.txt
+akrills@DESKTOP-70J5NO3:~/rabbit$ rm r*
+akrills@DESKTOP-70J5NO3:~/rabbit$ mv water.txt ~
+akrills@DESKTOP-70J5NO3:~/rabbit$ cd ..
+akrills@DESKTOP-70J5NO3:~$ rmdir rabbit
+akrills@DESKTOP-70J5NO3:~$ ls
+ersjokerAppDataLocalPackagesCanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgscLocalStaterootfshomeakrills
+student.txt
+water.txt
+akrills@DESKTOP-70J5NO3:~$  exit
