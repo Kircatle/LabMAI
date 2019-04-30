@@ -5,9 +5,7 @@ typedef struct tree
     int key;
     struct tree* left;
     struct tree* right;
-    struct tree* parent;
 }node;
-
 void create_tree(node **tree, int key)
 {
     node *tmp = malloc(sizeof(node));
@@ -16,7 +14,6 @@ void create_tree(node **tree, int key)
     tmp -> right = NULL;
     *tree = tmp;
 }
-
 void add_graph(node **tree, int key)
 {
     node *tree2 = *tree;
@@ -38,16 +35,6 @@ void add_graph(node **tree, int key)
     else
         tree3 -> right = tmp;
 }
-    
-node* search_graph(node* tree,int key)
-{
-    if ((tree == NULL) || (tree->key==key))
-        return tree;
-    if (key<tree->key)
-        return search_graph(tree->left, key);
-    else
-        return search_graph(tree->right, key); 
-}
 void tree_print(node *tree, int gap)
 {
     if (tree == NULL)
@@ -58,102 +45,262 @@ void tree_print(node *tree, int gap)
     printf("%d\n",tree -> key );
     tree_print(tree -> left, gap+1);
 }
-node* min_graph(node *tree)
+void inorder_count(node* root, int* count)
 {
-    node *min = tree;
-    while (min -> left != NULL)
-        min = min -> left;
-    return min;
-}
-node *succ(node *root)
-{
-    node *p = root, *l = NULL;
-// Если есть правое поддерево, то ищем минимальный элемент в этом поддереве
-    if (p -> right != NULL)
-        return min_graph(p -> right);
-/* Правое дерево пусто, идем по родителям до тех пор,
-пока не найдем родителя, для которого наше поддерево левое */
-    l = p -> parent;
-    while ((l != NULL) && (p == l -> right))
+ if (root)
+ {
+    inorder_count(root->left, &*count);
+    if (root->left)
     {
-        p = l;
-        l = l -> parent;
+        (*count)++;
     }
-    return l;
-}
-node *delete(node *root, int key)
-{
-// Поиск удаляемого узла по ключу
-    node *p = root, *l = NULL, *m = NULL;
-    l = search_graph(root, key);
-// 1 случай
-    if ((l -> left == NULL) && (l -> right == NULL))
-    {
-        m = l -> parent;
-        if (l == m -> right) m -> right == NULL;
-        else m -> left == NULL;
-        free(l);
-    }
-// 2 случай, 1 вариант - поддерево справа
-    if ((l -> left == NULL) && (l -> right != NULL))
-    {
-        m = l -> parent;
-        if (l == m -> right) m -> right == l -> right;
-        else m -> left == l -> right;
-        free(l);
-    }
-// 2 случай, 2 вариант - поддерево слева
-    if ((l -> left != NULL) && (l -> right == NULL))
-    {
-        m = l -> parent;
-        if (l == m -> right) m -> right == l -> left;
-        else m -> left == l -> left;
-        free(l);
-    }
-// 3 случай
-    if ((l -> left != NULL) && (l -> right != NULL))
-    {
-        m = succ(l);
-        l -> key = m -> key;
-        if (m -> right == NULL)
-            m -> parent -> left = NULL;
-        else m -> parent -> left = m -> right;
-        free(m);
-    }
-    return root;
-}
-void postorder(node *root, int *arr, int i)
-{
-    if (root == NULL)
-        return;
-    postorder(root -> left, arr, i++);
-    postorder(root -> right, arr, i++);
-    if (root -> key)
-        arr[i]=1;
     else
-        arr[i]=0;
-    
+    {   
+        (*count)++;
+
+    }
+    if (root->right)
+    {    
+        (*count)++;
+
+    }
+    else
+    {    
+        (*count)++;
+
+    }    
+    inorder_count(root->right, &*count);
+ } 
+}
+void inorder_array(node* root, int* array, int* i)
+{
+ if (root)
+ {
+    inorder_array(root->left, array, &*i);
+    if (root->left)
+    {
+        array[*i]=1;
+        (*i)++;
+    }
+    else
+    {   
+        array[*i]=0;
+        (*i)++;
+    }
+    if (root->right)
+    {    
+        array[*i]=1;
+        (*i)++;
+    }
+    else
+    {    
+        array[*i]=0;
+        (*i)++;
+    }     inorder_array(root->right, array, &*i);
+ } 
+}
+void *delete(node **root, int value)
+{
+    node *l = *root;
+    while (l -> key != value)
+    {
+
+        if (value < l -> key)
+            l = l -> left;
+        else l = l -> right;
+    }
+    if (l -> left == NULL && l -> right == NULL)
+    {
+        node *root2 = *root;
+        node *root3 = *root;
+        while (1)
+        {
+            if (root2 -> left != NULL)
+                if (root2 -> left -> key == value)
+                    break;
+            if (root2 -> right != NULL)
+                if (root2 -> right -> key == value)
+                    break;
+            if (value < root2 -> key)
+                root2 = root2 -> left;
+            else root2 = root2 -> right;
+            root3 = root2;
+        }
+        if (l == root3 -> right)
+            root3 -> right = NULL;
+        else root3 -> left = NULL;
+        free(l);
+
+    }
+    if (l -> left == NULL && l -> right != NULL)
+    {
+        node *root2 = *root;
+        node *root3 = *root;
+        while (1)
+        {
+            if (root2 -> left != NULL)
+                if (root2 -> left -> key == value)
+                    break;
+            if (root2 -> right != NULL)
+                if (root2 -> right -> key == value)
+                    break;
+            if (value < root2 -> key)
+                root2 = root2 -> left;
+                    else root2 = root2 -> right;
+                    root3 = root2;
+
+        }
+        if (l == root3 -> right) 
+            root3 -> right = l -> right;
+        else root3 -> left = l -> right;
+        free(l);
+    }
+
+    if (l -> left != NULL && l -> right == NULL)
+    {
+        node *root2 = *root;
+        node *root3 = *root;
+        while (1)
+        {
+            if (root2 -> left != NULL)
+                if (root2 -> left -> key == value)
+                        break;
+            if (root2 -> right != NULL)
+                if (root2 -> right -> key == value)
+                    break;
+            if (value < root2 -> key)
+                root2 = root2 -> left;
+            else 
+                root2 = root2 -> right;
+            root3 = root2;
+        }
+        if (l == root3 -> right) 
+            root3 -> right = l -> left;
+        else 
+            root3 -> left = l -> left;
+        free(l);
+    }
+    if (l -> left != NULL && l -> right !=NULL)
+    {
+        node *root2 = l;
+        while (1)
+        {
+            if (root2 -> right == NULL)
+            {
+                root2 = root2 -> left;
+                while (root2 -> right != NULL)
+                    root2 = root2 -> right;
+            }
+            if (root2 -> right != NULL)
+            {    
+                root2 = root2 -> right;
+                while (root2 -> left != NULL)
+                    root2 = root2 -> left;
+            }
+            break;
+        }
+        node *root3 = *root;
+        node *root4 = *root;
+        while (1)
+        {
+            if (root3 -> left != NULL)
+                if (root3 -> left -> key == root2 -> key)
+                    break;
+            if (root3 -> right != NULL)
+                if (root3 -> right -> key == root2 -> key)
+                    break;
+            if (value < root3 -> key)
+                root3 = root3 -> left;
+            else root3 = root3 -> right;
+            root4 = root3;
+        }
+        l -> key = root2 -> key;
+        if (root4 -> left -> key == root2 -> key)
+        {
+            if (root4 -> left -> left != NULL)
+                root4 -> left = root4 -> left -> right;
+            else if (root4 -> left -> right != NULL)
+                root4 -> left = root4 -> left -> right;
+            else 
+                root4 -> left = NULL;
+        }
+        else 
+        {
+            if (root4 -> left -> right != NULL)
+                root4 -> left = root4 -> left -> right;
+            else if (root4 -> right -> right != NULL)
+                root4 -> right = root4 -> right -> right;
+            else root4 -> right = NULL;
+        }
+        free(root2);
+    }
+}
+void print_menu()
+{
+    printf("\n1. Добавить узел.\n2. Напечатать дерево.\n3. Удалить узел.\n4. Проверить на самоподобие.\nВыберите действие: ");
+}
+void menu()
+{
+    int i=0, count=0, gap=0, act, graph,c;
+    node* tree;
+    int* array;
+    print_menu();
+    while(scanf("%d", &act)!=EOF)
+    {
+        switch(act)
+        {
+        case 1:
+            printf("\n");
+            scanf("%d", &graph);
+            if (tree==NULL)
+                create_tree(&tree, graph);
+            else
+                add_graph(&tree, graph);
+            print_menu();
+            break;
+        case 2:
+            printf("\n");
+            tree_print(tree, gap);
+            print_menu();
+            break;
+        case 3:
+            printf("\n");
+            scanf("%d", &graph);
+            delete(&tree, graph);
+            print_menu();
+            break;
+        case 4:
+            printf("\n");
+            inorder_count(tree, &count);
+            array=(int*)malloc(count*sizeof(int));
+            inorder_array(tree, array, &i);
+            c=count-1;
+            if (count%2!=0)
+            {
+                printf("Дерево не самоподобное");
+            }
+            else
+            {
+                for(int i = 0; i < count-1; i++)
+                {
+                    if (array[c]-array[i]==0)
+                    c=c-1;
+                }
+
+            }
+            if (c==0)
+                printf("Дерево самоподобное");
+            else 
+                printf("Дерево не самоподобное");
+            print_menu();
+            break;
+        default:
+            printf("\nПожалуйста, выберите один из представленных пунктов меню!\n");
+            break;
+        }
+    }
 }
 int main()
-{
-    int arr[100];
-    for (int i=0; i<100; i++)
-        arr[i]=0;
-    node* tree;
-    node* lal;
-    create_tree(&tree, 8);
-    add_graph(&tree, 5);
-    add_graph(&tree, 2);
-    add_graph(&tree, 1);
-    add_graph(&tree, 6);
-    add_graph(&tree, 9);
-    add_graph(&tree, 11);
-    add_graph(&tree, 7);
-    tree_print(tree, 1);
-    postorder(tree,arr, 0);
-    lal=succ(tree->right);
-    for (int i=0; i<100; i++)
-        printf(" %d ", arr[i]);
-    printf("\n%d", lal->key);
-
+{    
+   menu();
 }
