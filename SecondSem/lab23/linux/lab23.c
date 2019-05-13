@@ -241,9 +241,9 @@ void print_menu()
 }
 void menu()
 {
-    int i=0, count=0, gap=0, act, graph,c;
+    int i, count, gap=0, act, graph,c,c2 ;
     node* tree;
-    int* array;
+    int* array=NULL;
     print_menu();
     while(scanf("%d", &act)!=EOF)
     {
@@ -270,29 +270,35 @@ void menu()
             print_menu();
             break;
         case 4:
+            count=0; c=0; c2=0, i=0;
             printf("\n");
             inorder_count(tree, &count);
-            array=(int*)malloc(count*sizeof(int));
+            array=(int*)realloc(array ,count*sizeof(int));
             inorder_array(tree, array, &i);
-            c=count-1;
-            if (count%2!=0)
+            c=count-1; c2=count;
+            if (!tree->left || !tree->right)
             {
-                printf("Дерево не самоподобное");
+                printf("Дерево не самоподобное\n");
+                free(array);
+                print_menu();
+                break;
             }
             else
             {
-                for(int i = 0; i < count-1; i++)
+                for(int l = 0; l < count; l++)
                 {
-                    if (array[c]-array[i]==0)
-                    c=c-1;
+                    if (array[c]-array[l]==0)
+                        c2--;
+                    c--;
                 }
-
+                if (c2==0)
+                    printf("Дерево самоподобное\n");
+                else 
+                    printf("Дерево не самоподобное\n");
+                print_menu();
+                free(array);
+                printf("\n");
             }
-            if (c==0)
-                printf("Дерево самоподобное");
-            else 
-                printf("Дерево не самоподобное");
-            print_menu();
             break;
         default:
             printf("\nПожалуйста, выберите один из представленных пунктов меню!\n");
