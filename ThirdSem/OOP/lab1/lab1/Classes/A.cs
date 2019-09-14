@@ -8,25 +8,17 @@ namespace lab1
 {
     class A
     {
-        private B b = null;
-        private C c = null;
-
         public A(B b, C c) //Конструктор класса
         {
             this.b = b;
             this.c = c;
         }
-        public B bA //переопределение поля b
+        public B bA // доступ к атрибуту b
         {
             get
             {
                 Console.Write("a->get b->");
                 return b;
-            }
-            set
-            {
-                Console.Write("a->set b\n");
-                b = value;
             }
         }
         public C cA //переопределение поля c
@@ -36,16 +28,12 @@ namespace lab1
                 Console.Write("a->get c->");
                 return c;
             }
-            set
-            {
-                Console.Write("a->set c\n");
-                c = value;
-            }
         }
         public void mA()
         {
-            Console.WriteLine("method of A");
+            Console.WriteLine("a->method of A");
         }
-
+        private B b = null;
+        private C c = null;
     }
 }

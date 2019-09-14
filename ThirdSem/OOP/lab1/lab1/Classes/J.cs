@@ -8,18 +8,12 @@ namespace lab1
 {
     class J
     {
-        private K k = null;
         public J(K k)
         {
             this.k = k;
         }
         public K kA
         {
-            set
-            {
-                Console.Write("set k\n");
-                k = value;
-            }
             get
             {
                 Console.Write("get k->");
@@ -30,5 +24,6 @@ namespace lab1
         {
             Console.WriteLine("method of J");
         }
+        private K k = null;
     }
 }

@@ -12,3 +12,10 @@ C:\Users\joker\__DEV__\LabMAI\ThirdSem\OOP\lab1\lab1\obj\Debug\lab1.csprojAssemb
 C:\Users\joker\__DEV__\LabMAI\ThirdSem\OOP\lab1\lab1\obj\Debug\lab1.csproj.CoreCompileInputs.cache
 C:\Users\joker\__DEV__\LabMAI\ThirdSem\OOP\lab1\lab1\obj\Debug\lab1.exe
 C:\Users\joker\__DEV__\LabMAI\ThirdSem\OOP\lab1\lab1\obj\Debug\lab1.pdb
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab1\lab1\bin\Debug\lab1.exe.config
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab1\lab1\bin\Debug\lab1.exe
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab1\lab1\bin\Debug\lab1.pdb
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab1\lab1\obj\Debug\lab1.csprojAssemblyReference.cache
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab1\lab1\obj\Debug\lab1.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab1\lab1\obj\Debug\lab1.exe
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab1\lab1\obj\Debug\lab1.pdb

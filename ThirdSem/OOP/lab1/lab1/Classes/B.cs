@@ -8,7 +8,6 @@ namespace lab1
 {
     class B
     {
-        private D d = null;
         public B(D d)
         {
             this.d = d;
@@ -20,15 +19,11 @@ namespace lab1
                 Console.Write("get d->");
                 return d;
             }
-            set
-            {
-                Console.Write("set d\n");
-                d = value;
-            }
         }
         public void mB()
         {
             Console.WriteLine("method of B");
         }
+        private D d = null;
     }
 }

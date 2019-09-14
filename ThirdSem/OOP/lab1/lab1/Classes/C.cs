@@ -8,8 +8,6 @@ namespace lab1
 {
     class C
     {
-        private E e = null;
-        private J j = null;
         public C(E e, J j)
         {
             this.e = e;
@@ -22,11 +20,6 @@ namespace lab1
                 Console.Write("get e->");
                 return e;
             }
-            set
-            {
-                Console.Write("set e\n");
-                e = value;
-            }
         }
         public J jA
         {
@@ -35,15 +28,12 @@ namespace lab1
                 Console.Write("get j->");
                 return j;
             }
-            set
-            {
-                Console.Write("set j\n");
-                j = value;
-            }
         }
         public void mC()
         {
             Console.WriteLine("method of C");
         }
+        private E e = null;
+        private J j = null;
     }
 }
