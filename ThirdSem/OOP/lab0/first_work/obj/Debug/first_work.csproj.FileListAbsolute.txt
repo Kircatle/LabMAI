@@ -1,0 +1,14 @@
+C:\Users\User\Desktop\labsOOP\first_work\first_work\bin\Debug\first_work.exe.config
+C:\Users\User\Desktop\labsOOP\first_work\first_work\bin\Debug\first_work.exe
+C:\Users\User\Desktop\labsOOP\first_work\first_work\bin\Debug\first_work.pdb
+C:\Users\User\Desktop\labsOOP\first_work\first_work\obj\Debug\first_work.csprojAssemblyReference.cache
+C:\Users\User\Desktop\labsOOP\first_work\first_work\obj\Debug\first_work.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\labsOOP\first_work\first_work\obj\Debug\first_work.exe
+C:\Users\User\Desktop\labsOOP\first_work\first_work\obj\Debug\first_work.pdb
+C:\Users\User\Desktop\labsOOP\array_stack\first_work\bin\Debug\first_work.exe.config
+C:\Users\User\Desktop\labsOOP\array_stack\first_work\bin\Debug\first_work.exe
+C:\Users\User\Desktop\labsOOP\array_stack\first_work\bin\Debug\first_work.pdb
+C:\Users\User\Desktop\labsOOP\array_stack\first_work\obj\Debug\first_work.csprojAssemblyReference.cache
+C:\Users\User\Desktop\labsOOP\array_stack\first_work\obj\Debug\first_work.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\labsOOP\array_stack\first_work\obj\Debug\first_work.exe
+C:\Users\User\Desktop\labsOOP\array_stack\first_work\obj\Debug\first_work.pdb

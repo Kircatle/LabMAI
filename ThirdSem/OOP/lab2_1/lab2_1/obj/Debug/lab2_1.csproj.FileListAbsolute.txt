@@ -1,0 +1,7 @@
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab2_1\lab2_1\obj\Debug\lab2_1.csprojAssemblyReference.cache
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab2_1\lab2_1\obj\Debug\lab2_1.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab2_1\lab2_1\bin\Debug\lab2_1.exe.config
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab2_1\lab2_1\bin\Debug\lab2_1.exe
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab2_1\lab2_1\bin\Debug\lab2_1.pdb
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab2_1\lab2_1\obj\Debug\lab2_1.exe
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab2_1\lab2_1\obj\Debug\lab2_1.pdb

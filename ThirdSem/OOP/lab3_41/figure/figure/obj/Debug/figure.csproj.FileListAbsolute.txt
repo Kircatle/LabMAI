@@ -1,0 +1,14 @@
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab3\figure\figure\figure\bin\Debug\figure.exe.config
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab3\figure\figure\figure\bin\Debug\figure.exe
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab3\figure\figure\figure\bin\Debug\figure.pdb
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab3\figure\figure\figure\obj\Debug\figure.csprojAssemblyReference.cache
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab3\figure\figure\figure\obj\Debug\figure.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab3\figure\figure\figure\obj\Debug\figure.exe
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab3\figure\figure\figure\obj\Debug\figure.pdb
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab3_41\figure\figure\bin\Debug\figure.exe.config
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab3_41\figure\figure\bin\Debug\figure.exe
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab3_41\figure\figure\bin\Debug\figure.pdb
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab3_41\figure\figure\obj\Debug\figure.csprojAssemblyReference.cache
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab3_41\figure\figure\obj\Debug\figure.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab3_41\figure\figure\obj\Debug\figure.exe
+C:\Users\User\Desktop\dev\LabMAI\ThirdSem\OOP\lab3_41\figure\figure\obj\Debug\figure.pdb

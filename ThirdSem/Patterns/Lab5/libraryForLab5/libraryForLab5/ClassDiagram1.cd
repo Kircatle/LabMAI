@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="libraryForLab5.ClientAuto" Collapsed="true">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAASAAAAAAAAABAAAAACAAAAAAJEAAAAAAAAA=</HashCode>
+      <FileName>ClientAuto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="libraryForLab5.AbstractFactoryAuto" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAU=</HashCode>
+      <FileName>Factories\AbstractFactoryAuto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="libraryForLab5.FactoryCar" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAU=</HashCode>
+      <FileName>Factories\FactoryCar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="libraryForLab5.FactoryTruck" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAU=</HashCode>
+      <FileName>Factories\FactoryTruck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="libraryForLab5.AbstractProductBody" Collapsed="true">
+    <Position X="9.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAQAAAAAAAAAAAAQAACAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\AbstractProductBody.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="libraryForLab5.AbstractProductEngine" Collapsed="true">
+    <Position X="9.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAEAAQAACAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Products\AbstractProductEngine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="libraryForLab5.AbstractProductTank" Collapsed="true">
+    <Position X="9.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAQAAAAAAAAIAAAQAACAIAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Products\AbstractProductTank.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="libraryForLab5.CarBody" Collapsed="true">
+    <Position X="8.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAQAAAAAAAAAAAAQAACAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\CarProduct\CarBody.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="libraryForLab5.CarEngine" Collapsed="true">
+    <Position X="8.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAEAAQAACAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Products\CarProduct\CarEngine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="libraryForLab5.CarTank" Collapsed="true">
+    <Position X="8.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAQAAAAAAAAIAAAQAACAIAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Products\CarProduct\CarTank.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="libraryForLab5.TruckBody" Collapsed="true">
+    <Position X="11" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAQAAAAAAAAAAAAQAACAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\TruckProduct\TruckBody.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="libraryForLab5.TruckEngine" Collapsed="true">
+    <Position X="10.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAEAAQAACAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Products\TruckProduct\TruckEngine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="libraryForLab5.TruckTank" Collapsed="true">
+    <Position X="11" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAQAAAAAAAAIAAAQAACAIAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Products\TruckProduct\TruckTank.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

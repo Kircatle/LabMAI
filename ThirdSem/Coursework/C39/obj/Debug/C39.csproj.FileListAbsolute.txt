@@ -1,0 +1,32 @@
+C:\Users\User\Desktop\C39\C39\bin\Debug\C39.exe.config
+C:\Users\User\Desktop\C39\C39\bin\Debug\C39.exe
+C:\Users\User\Desktop\C39\C39\bin\Debug\C39.pdb
+C:\Users\User\Desktop\C39\C39\obj\Debug\C39.csprojAssemblyReference.cache
+C:\Users\User\Desktop\C39\C39\obj\Debug\C39.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\C39\C39\obj\Debug\C39.exe
+C:\Users\User\Desktop\C39\C39\obj\Debug\C39.pdb
+C:\Users\User\Desktop\C39\C39\obj\Debug\C39.View.resources
+C:\Users\User\Desktop\C39\C39\obj\Debug\C39.csproj.GenerateResource.cache
+C:\Users\User\Desktop\C39\C39\bin\Debug\System.Linq.Dynamic.Core.dll
+C:\Users\User\Desktop\C39\C39\bin\Debug\System.Linq.Dynamic.Core.pdb
+C:\Users\User\Desktop\C39\C39\bin\Debug\System.Linq.Dynamic.Core.xml
+C:\Users\User\Desktop\C39\C39\obj\Debug\C39.csproj.CopyComplete
+C:\Users\User\Desktop\C39\C39\obj\Debug\C39.Langueage.resources
+C:\Users\User\Desktop\C39\C39\obj\Debug\C39.Properties.Resources.resources
+C:\Users\User\Desktop\C39\C39\obj\Debug\C39.About.resources
+C:\Users\User\Documents\dev\LabMAI\ThirdSem\Курсовая работа Сыроежкин Кирилл М8О-204Б-18\C39\bin\Debug\C39.exe.config
+C:\Users\User\Documents\dev\LabMAI\ThirdSem\Курсовая работа Сыроежкин Кирилл М8О-204Б-18\C39\bin\Debug\C39.exe
+C:\Users\User\Documents\dev\LabMAI\ThirdSem\Курсовая работа Сыроежкин Кирилл М8О-204Б-18\C39\bin\Debug\C39.pdb
+C:\Users\User\Documents\dev\LabMAI\ThirdSem\Курсовая работа Сыроежкин Кирилл М8О-204Б-18\C39\bin\Debug\System.Linq.Dynamic.Core.dll
+C:\Users\User\Documents\dev\LabMAI\ThirdSem\Курсовая работа Сыроежкин Кирилл М8О-204Б-18\C39\bin\Debug\System.Linq.Dynamic.Core.pdb
+C:\Users\User\Documents\dev\LabMAI\ThirdSem\Курсовая работа Сыроежкин Кирилл М8О-204Б-18\C39\bin\Debug\System.Linq.Dynamic.Core.xml
+C:\Users\User\Documents\dev\LabMAI\ThirdSem\Курсовая работа Сыроежкин Кирилл М8О-204Б-18\C39\obj\Debug\C39.csprojAssemblyReference.cache
+C:\Users\User\Documents\dev\LabMAI\ThirdSem\Курсовая работа Сыроежкин Кирилл М8О-204Б-18\C39\obj\Debug\C39.About.resources
+C:\Users\User\Documents\dev\LabMAI\ThirdSem\Курсовая работа Сыроежкин Кирилл М8О-204Б-18\C39\obj\Debug\C39.Langueage.resources
+C:\Users\User\Documents\dev\LabMAI\ThirdSem\Курсовая работа Сыроежкин Кирилл М8О-204Б-18\C39\obj\Debug\C39.Properties.Resources.resources
+C:\Users\User\Documents\dev\LabMAI\ThirdSem\Курсовая работа Сыроежкин Кирилл М8О-204Б-18\C39\obj\Debug\C39.View.resources
+C:\Users\User\Documents\dev\LabMAI\ThirdSem\Курсовая работа Сыроежкин Кирилл М8О-204Б-18\C39\obj\Debug\C39.csproj.GenerateResource.cache
+C:\Users\User\Documents\dev\LabMAI\ThirdSem\Курсовая работа Сыроежкин Кирилл М8О-204Б-18\C39\obj\Debug\C39.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\dev\LabMAI\ThirdSem\Курсовая работа Сыроежкин Кирилл М8О-204Б-18\C39\obj\Debug\C39.csproj.CopyComplete
+C:\Users\User\Documents\dev\LabMAI\ThirdSem\Курсовая работа Сыроежкин Кирилл М8О-204Б-18\C39\obj\Debug\C39.exe
+C:\Users\User\Documents\dev\LabMAI\ThirdSem\Курсовая работа Сыроежкин Кирилл М8О-204Б-18\C39\obj\Debug\C39.pdb

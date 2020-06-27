@@ -1,0 +1,6 @@
+C:\Users\joker\Desktop\Lab5\libraryForLab5\libraryForLab5\bin\Release\libraryForLab5.dll
+C:\Users\joker\Desktop\Lab5\libraryForLab5\libraryForLab5\bin\Release\libraryForLab5.pdb
+C:\Users\joker\Desktop\Lab5\libraryForLab5\libraryForLab5\obj\Release\libraryForLab5.csprojAssemblyReference.cache
+C:\Users\joker\Desktop\Lab5\libraryForLab5\libraryForLab5\obj\Release\libraryForLab5.csproj.CoreCompileInputs.cache
+C:\Users\joker\Desktop\Lab5\libraryForLab5\libraryForLab5\obj\Release\libraryForLab5.dll
+C:\Users\joker\Desktop\Lab5\libraryForLab5\libraryForLab5\obj\Release\libraryForLab5.pdb
