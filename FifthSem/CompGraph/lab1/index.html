@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>График кривой</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="solution.js" defer></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js" charset="utf-8"></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+
+    </head>
+    <body>
+    <p>Лабораторная работа №1.<br>Вариант 16.<br>Сыроежкин Кирилл Геннадьевич.<br>Группа М8О-304Б-18</p>
+    <h1 id=header>График кривой</h1>
+    <div id="graph" style="width: 700px;height:600px;"></div>
+    <form id="info">
+            <p>\(y^2 = x^2*\frac{(a-x)}{(a+x)}, -a < A <= x <= B < a\)</p>
+            <p><label for="valueA">a </label><input type="text" id="valueA" name="value_a" value="5"></p>
+            <p><label for="valueBigA">A </label><input type="text" id="valueBigA" name="valueBigA" value="-4"></p>
+            <p><label for="valueBigB">B </label><input type="text" id="valueBigB" name="valueBigB" value="4"></p>
+            <p><input type="button" value="Нарисовать" onclick="plotGraph(graph, layout, options)"></p>
+        </form>
+    </body>
+</html>
