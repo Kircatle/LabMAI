@@ -9,6 +9,22 @@
 <p>Лабораторная работа №2<br>Вариант №9<br>Сыроежкин Кирилл<br>Группа М8О-304Б-18</p>
 <h1 id="header">Шестигранная прямая правильная призма</h1>
 <canvas id="prism" height="500" width="500" ></canvas>
+<script id="vertex-shader-2d" type="glsl">
+    attribute vec4 a_position;
+
+    void main()
+    {
+        gl_Position = a_position;
+    }
+</script>
+<script  id="fragment-shader-2d" type="glsl">
+    precision mediump float;
+
+    void main()
+    {
+        gl_FragColor = vec4(1, 0, 0.5, 1);
+    }
+</script>
 <script src="solution.js"></script>
 </body>
 </html>
