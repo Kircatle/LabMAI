@@ -19,6 +19,7 @@ function main()
     let old_x; let old_y;
     let rot_x = 0.; let rot_y = 0.;
     let scale = 0.9;
+
     let mouseDownHandler = function (e)
     {
         drag = true;
@@ -51,7 +52,6 @@ function main()
     let wheelHandler = function (e)
     {
         scale += e.deltaY/1000;
-        console.log(zoom);
         e.preventDefault();
 
 
