@@ -73,6 +73,7 @@ function main()
     canvas.addEventListener("mouseout", mouseUpHandler, false);
     canvas.addEventListener("mousemove", mouseMoveHandler, false);
     canvas.addEventListener('wheel',wheelHandler, false);
+
     let drawScene = function(time)
     {
         let points = getPoints(sectorStepCylinder, edgeCylinder, heightCylinder);
@@ -109,16 +110,12 @@ function drawTriangle(scene, trianglePoints, angles, scale)
     point1 = functions3d.projectPointTo2d(point1, scale);
     point2 = functions3d.projectPointTo2d(point2, scale);
     point3 = functions3d.projectPointTo2d(point3, scale);
-
-    let light =Math.abs(functions3d.dot(normal,functions3d.normalize([0,0,1])));
+    let light =Math.abs(functions3d.dot(functions3d.normalize(normal),functions3d.normalize([0,0,-1])));
     let g = String(Math.floor(0.5*255*light));
     let r = String(Math.floor(255*0.5*light));
     let b = String(Math.floor(255*0.3*light));
-
-
     let color = "rgb("+r+","+g+","+b+")";
-    console.log(light)
-    console.log(color)
+    scene.strokeStyle = color;
     point1 = convertToPixels(point1, scene.canvas.height, scene.canvas.width);
     point2 = convertToPixels(point2, scene.canvas.height, scene.canvas.width);
     point3 = convertToPixels(point3, scene.canvas.height, scene.canvas.width);
@@ -131,6 +128,7 @@ function drawTriangle(scene, trianglePoints, angles, scale)
         scene.lineTo(point1[0], point1[1]);
         scene.fill();
         scene.closePath();
+        scene.stroke();
     }
 }
 
@@ -174,7 +172,7 @@ function getPoints(sectorStep, edge, height)
     vertex = vertex.concat(getVertexBase(sectorStep, edge, height));
     vertex = vertex.concat(getVertexSideEdge(sectorStep, edge, height));
     vertex = vertex.concat(getVertexBackEdge(edge, height));
-    return new Float32Array(vertex);
+    return vertex;
 }
 
 function getVertexSideEdge(sectorStep, edge, height)
