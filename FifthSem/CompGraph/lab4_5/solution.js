@@ -7,9 +7,10 @@ function main()
     let gl = scene3d.getContext("webgl");
     let program = createProgram(gl);
     let positionLocation = gl.getAttribLocation(program, "a_position");
-    let colorLocation = gl.getUniformLocation(program, 'u_FragColor');
+    let normalLocation = gl.getAttribLocation(program, "a_normal");
     let matrixLocation = gl.getUniformLocation(program, "u_matrix");
-    gl.enableVertexAttribArray(positionLocation);
+    let colorLocation = gl.getUniformLocation(program, "u_FragColor");
+    let reverseLightDirectionLocation = gl.getUniformLocation(program, "u_reverseLightDirection");
     gl.enable(gl.DEPTH_TEST);
     let drag = false;
     let old_x; let old_y;
@@ -80,13 +81,17 @@ function main()
     scene3d.addEventListener("mousemove", mouseMoveHandler, false);
     scene3d.addEventListener('wheel',wheelHandler, false);
 
-
     let drawScene = function (time)
     {
-        rotation=[rot_y, rot_x, 0];
+        let normalBuffer = gl.createBuffer();
         let positionBuffer = gl.createBuffer();
+        gl.enableVertexAttribArray(positionLocation);
+        gl.enableVertexAttribArray(normalLocation);
         gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
         setVertex(gl, sectorStep, edge, height);
+        gl.bindBuffer(gl.ARRAY_BUFFER, normalBuffer);
+        setNormals(gl, sectorStep, edge, height);
+        rotation=[rot_y, rot_x, 0];
         gl.useProgram(program);
         let matrix = m4.identity();
         matrix = m4.scale(matrix, scale, scale, scale);
@@ -100,15 +105,99 @@ function main()
         let offset = 0;
         gl.clearColor(0, 0, 0, 0);
         gl.clear(gl.COLOR_BUFFER_BIT);
+        gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
         gl.vertexAttribPointer(positionLocation, size, type, normalize, stride, offset);
+        gl.bindBuffer(gl.ARRAY_BUFFER, normalBuffer);
+        gl.vertexAttribPointer(normalLocation, size, type, normalize, stride, offset);
         gl.uniformMatrix4fv(matrixLocation, false, matrix);
-        gl.uniform4f(colorLocation, 1,0.4,1, 1);
-        gl.drawArrays(gl.TRIANGLES,0,3000);
+        gl.uniform4f(colorLocation, 0.1,0.5,0.3, 1);
+        gl.uniform3fv(reverseLightDirectionLocation, m4.normalize([0,0,-1]));
+        gl.drawArrays(gl.TRIANGLES,0,30000);
 
 
         requestAnimationFrame(drawScene)
     }
     requestAnimationFrame(drawScene)
+}
+
+function setNormals(gl, sectorStep, edge, height) {
+    let step = edge / sectorStep;
+    let normals = [];
+    let baseDown  = getBaseNormals(step,edge,-1);
+    let baseUpper = getBaseNormals(step,edge,1);
+    let edgeDownPlus = getEdgeNormals(step,edge,height, -1);
+    let edgeDownMinus = getEdgeNormals(step,edge,height, 1);
+    let edgeUpperPlus = getEdgeNormals(step,edge,height, -1);
+    let edgeUpperMinus = getEdgeNormals(step,edge,height, 1);
+    let edgeBack = [
+        0,0,1,
+        0,0,1,
+        0,0,1,
+        0,0,1,
+        0,0,1,
+        0,0,1,
+    ]
+    normals = normals.concat(baseDown).concat(baseDown);
+    normals = normals.concat(baseUpper).concat(baseUpper);
+    normals = normals.concat(edgeDownPlus);
+    normals = normals.concat(edgeDownMinus);
+    normals = normals.concat(edgeUpperPlus);
+    normals = normals.concat(edgeUpperMinus);
+    normals = normals.concat(edgeBack);
+
+    normals = new Float32Array(normals);
+    gl.bufferData(gl.ARRAY_BUFFER, normals, gl.STATIC_DRAW);
+    console.log(normals);
+}
+function getBaseNormals(step, edge, sign)
+{
+    let base = [];
+    for (let i = 0; i<=edge; i+=step)
+    {
+        base.push(0);
+        base.push(sign);
+        base.push(0);
+        base.push(0);
+        base.push(sign);
+        base.push(0);
+        base.push(0);
+        base.push(sign);
+        base.push(0);
+    }
+    return base;
+}
+
+function getEdgeNormals(step, edge, height, sign)
+{
+    let normals = [];
+    for (let i = 0; i<edge; i+=step)
+    {
+        let x1 = sign*1*i;
+        let y1 = -height;
+        let z1 = i*i;                           //plus = -1
+        let x2 = sign*1*(i+step);
+        let y2 = -height;
+        let z2 =(i+step)*(i+step);
+        let x3 = sign*i;
+        let y3 = height;
+        let z3 = i*i;
+        let vectorA = [x2-x1,y2-y1,z2-z1];
+        let vectorB = [x3-x1,y3-y1,z3-z1];
+        let a1 = vectorA[0], a2=vectorA[1], a3=vectorA[2];
+        let b1 = vectorB[0], b2 = vectorB[1], b3 = vectorB[2];
+        let normal = m4.normalize([-(a2*b3-a3*b2)*sign, sign*(a1*b3-a3*b1), -(a1*b2-a2*b1)*sign]);
+
+        normals.push(normal[0]);
+        normals.push(normal[1]);
+        normals.push(normal[2]);
+        normals.push(normal[0]);
+        normals.push(normal[1]);
+        normals.push(normal[2]);
+        normals.push(normal[0]);
+        normals.push(normal[1]);
+        normals.push(normal[2]);
+    }
+    return normals
 }
 
 
@@ -118,7 +207,6 @@ function setVertex(gl, sectorStep, edge, height)
     vertex = vertex.concat(getVertexBase(sectorStep, edge, height));
     vertex = vertex.concat(getVertexSideEdge(sectorStep, edge, height));
     vertex = vertex.concat(getVertexBackEdge(edge, height));
-    console.log(vertex);
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertex), gl.STATIC_DRAW);
 }
 
@@ -130,7 +218,7 @@ function getVertexSideEdge(sectorStep, edge, height)
     let upperTrianglesPlus = getVertexSideEdgeUpperTriangles(sectorStep, edge, 1, height);
     let upperTrianglesMinus = getVertexSideEdgeUpperTriangles(sectorStep, edge, -1, height);
     points = points.concat(downTrianglesMinus);
-    points = points.concat(downTrianglesPlus)
+    points = points.concat(downTrianglesPlus);
     points = points.concat(upperTrianglesMinus);
     points = points.concat(upperTrianglesPlus);
     return points
@@ -308,6 +396,7 @@ function smartReverse(array, sizeGroup)
 }
 main();
 
+
 let m4 = {
 
     xRotate: function(m, angleInRadians) {
@@ -437,5 +526,16 @@ let m4 = {
             0,  0, 1,  0,
             0,  0,  0,  1,
         ]
+    },
+    normalize: function(v, dst)
+    {
+        dst = dst || new Float32Array(3);
+        let length = Math.sqrt(v[0] * v[0] + v[1] * v[1] + v[2] * v[2]);
+        if (length > 0.00001) {
+            dst[0] = v[0] / length;
+            dst[1] = v[1] / length;
+            dst[2] = v[2] / length;
+        }
+        return dst;
     }
 };

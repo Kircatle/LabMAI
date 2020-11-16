@@ -8,21 +8,32 @@
 <body>
     <script id="fragment-shader-2d" type="x-shader/x-fragment">
 
-       precision mediump float;
-       uniform vec4 u_FragColor;
+        precision mediump float;
+        uniform vec3 u_reverseLightDirection;
+        uniform vec4 u_FragColor;
+        varying vec3 v_normal;
 
-       void main()
-       {
-            gl_FragColor = u_FragColor;
-       }
-    </script>
-    <script id="vertex-shader-2d" type="x-shader/x-vertex">
-        attribute vec4 a_position;
-        uniform mat4 u_matrix;
 
         void main()
         {
-            gl_Position = u_matrix*a_position;
+                vec3 normal = normalize(v_normal);
+                float light = dot(normal, u_reverseLightDirection);
+                gl_FragColor = u_FragColor;
+                gl_FragColor.rgb *= light;
+        }
+    </script>
+    <script id="vertex-shader-2d" type="x-shader/x-vertex">
+        attribute vec4 a_position;
+        attribute vec3 a_normal;
+
+        uniform mat4 u_matrix;
+
+        varying vec3 v_normal;
+
+        void main()
+        {
+            gl_Position = u_matrix * a_position;
+            v_normal = mat3(u_matrix)*a_normal;
         }
     </script>
     <div class="parent">
