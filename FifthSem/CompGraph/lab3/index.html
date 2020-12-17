@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Цилиндр</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="parent">
+    <div class="child">
+        <p>Лабораторная работа №3<br>
+            Вариант 16.<br>
+            Группа М8О-304Б-18.<br>
+            Сыроежкин Кирилл Геннадьевич </p>
+    </div>
+    <div class="child">
+        <h1 id="header">Параболический цилиндр</h1>
+        <canvas id="scene3d" width="500" height="500"></canvas>
+    </div>
+
+</div>
+<div class="input">Точность<input id="approximation" type="range" min="1" max="100" value="2"></div>
+<div class="input">Высота<input id="height" step="0.1" type="range" min="0.1" max="1" value="1"></div>
+<div class="input">Диапозон x<input id="edge" step="0.1" type="range" min="0.1" max="1" value="1"></div>
+<script src="main.js"></script>
+</body>
+</html>
