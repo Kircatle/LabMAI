@@ -1,0 +1,29 @@
+y0 = 2
+y1 = 2.5-0.5*np.log(3)
+a = 0
+b = math.pi/6
+h = math.pi/60
+n1 = 4
+n2 = 3
+eps = 0.01
+
+def function(x,y,z):
+    return np.tan(x)*z-2*y
+
+def solution(x):
+    return np.sin(x)+2-np.sin(x)*np.log((1+np.sin(x))/((1-np.sin(x))))
+    
+    
+    
+    
+y0 = 1
+y1 = 2
+a = 0
+b = 1
+h = 0.01
+n1 = 1
+n2 = 0.8
+eps = 0.0001
+
+def function(x,y,z):
+    return np.exp(x)+np.sin(y)
